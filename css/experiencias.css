@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #fafafa;
+    color: #606060;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "filtro experiencias experiencias"
+        "footer footer footer"
+    ;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-rows: 555px 1fr 150px;
+}
+
+header {
+    grid-area: header;
+}
+#filtro {
+    grid-area: filtro;
+}
+#experiencias {
+    grid-area: experiencias;
+}
+footer{
+    grid-area: footer;
+}
+
+/* HEADER */
+
+.header__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    height: 55px;
+    width: auto;
+}
+
+.header__nav ul {
+    margin: 10px;
+    list-style-type: none;
+}
+
+.header__nav li {
+    display: inline-block;
+    padding: 0px 5px;
+    text-transform: uppercase;
+}
+
+.header__li {
+    border-right: 1px solid #606060;
+    padding-right: 10px !important; 
+}
+
+ul li a {
+    text-decoration: none;
+    color: #606060;
+}
+
+.header__img {
+    background-image: url(../img/mar_loros-2-2048x1536.jpeg);
+    width: 100%;
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+header h1 {
+    text-transform: uppercase;
+    font-size: 100px;
+    color: #fafafa;
+    margin-left: 40px;
+    margin-bottom: 10px;
+}
+
+/* FILTRO LATERAL */
+
+#filtro {
+    padding-top: 50px;
+}
+
+#filtro p {
+    text-transform: uppercase;
+    font-size: 20px;
+    padding-left:20px;
+    font-weight: 700;
+}
+
+#filtro ul {
+    list-style-type: none;
+    padding: 15px 0px 0px 30px;
+}
+
+#filtro li {
+    text-transform: uppercase;
+    margin: 20px 0px;
+}
+
+/* CARDS */
+.cards__container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 40px 10px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0px;
+    width: 300px;
+    border: 1px solid #6060602b;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.cards h4 {
+    padding-bottom: 15px;
+
+}
+
+.cards__h4-border {
+    width: 30%;
+    border-bottom: 1.5px solid #606060;
+    margin-bottom: 10px;
+}
+
+.cards__img {
+    height: 60%;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 40px 5px;
+    background-color: #606060;
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+footer ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+footer ul li {
+    display: inline-block;
+    padding: 0px 5px;
+}
+
+.footer__li {
+    border-right: 1px solid #fafafa;
+    padding-right: 10px
+}
+
+.footer__pages a {
+    color: #fafafa;
+}
+
+.footer__socialmedia img {
+    height: 30px;
+    padding: 0px 5px 0px 30px;
+}
+
+footer p {
+    font-size: 10px;
+    padding: 5px;
+    color: #fafafa;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-areas:
+            "header header header"
+            "filtro filtro filtro"
+            "experiencias experiencias experiencias"
+            "footer footer footer"
+        ;
+        grid-template-rows: 555px 200px 1fr 150px;
+    }
+    .header__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    header h1 {
+        font-size: 70px;
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+    #filtro {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #filtro p {
+        padding: 0;
+        margin-bottom: 30px;
+        font-size: 30px;
+    }
+    #filtro ul {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+    }
+    #filtro ul li{
+        display: flex;
+        flex-direction: row;
+        padding: 0px 10px;
+        margin: 0;
+    }
+    .experiencias-border {
+        width: 100%;
+        border-top: 1px solid #606060;
+    }
+    .cards {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        grid-template-rows: 555px 150px 1fr 180px;
+    }
+    .header__nav ul {
+        margin: 5px;
+        list-style-type: none;
+    }
+    .header__nav li {
+        padding: 0px 3px;
+        font-size: 8px;                      /* Por ahora lo dejo así hasta que veamos como poner un menú hamburguesa */
+    }
+    .header__li {
+        padding-right: 6px !important; 
+    }
+    header h1 {
+        font-size: 40px;
+    } 
+    #filtro p {
+        font-size: 20px;
+    }
+    #filtro ul li{
+        font-size: 10px;
+    }
+    #filtro li {
+        text-transform: uppercase;
+        margin: 20px 0px;
+    }
+    .footer__pages {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .footer__socialmedia {
+        padding-top: 20px;
+    }
+    .footer__socialmedia  img{
+        padding: 0px 10px;
+    }
+}
