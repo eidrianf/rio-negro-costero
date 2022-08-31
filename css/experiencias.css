@@ -59,6 +59,12 @@ footer{
     display: inline-block;
     padding: 0px 5px;
     text-transform: uppercase;
+    transition: all 0.4s ease;
+}
+
+nav ul li:hover {
+    transform: translateY(-3px);
+    transition: all 0.4s ease;
 }
 
 .header__li {
@@ -131,6 +137,7 @@ header h1 {
     border: 1px solid #6060602b;
     border-radius: 5px;
     padding: 10px;
+    transition: all 0.5s; 
 }
 
 .cards h4 {
@@ -149,6 +156,13 @@ header h1 {
     width: 100%;
     object-fit: cover;
     margin-bottom: 20px;
+}
+
+.cards:hover {
+    transition: all 0.5s;
+    box-shadow: 5px 5px 20px -1px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 5px 5px 20px -1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 5px 5px 20px -1px rgba(0,0,0,0.2);  
 }
 
 /* FOOTER */
@@ -175,6 +189,12 @@ footer ul {
 footer ul li {
     display: inline-block;
     padding: 0px 5px;
+    transition: all 0.4s ease;
+}
+
+footer ul li:hover {
+    transform: translateY(-3px);
+    transition: all 0.4s ease;
 }
 
 .footer__li {
@@ -186,9 +206,29 @@ footer ul li {
     color: #fafafa;
 }
 
-.footer__socialmedia img {
+.footer__socialmedia svg {
     height: 30px;
-    padding: 0px 5px 0px 30px;
+    padding: 5px 5px 0px 30px;
+}
+
+.svg-claro {
+    fill: #fafafa;
+    transition: all 0.40s;
+}
+
+.svg-claro.facebook:hover {
+    fill: #3B5998;
+    transition: all 0.40s ease;
+}
+
+.svg-claro.instagram:hover {
+    fill: #cd486b;
+    transition: all 0.40s ease;
+}
+
+.svg-claro.twitter:hover {
+    fill: #55acee;
+    transition: all 0.40s ease;
 }
 
 footer p {
@@ -292,9 +332,9 @@ footer p {
         margin-bottom: 20px;
     }
     .footer__socialmedia {
-        padding-top: 20px;
+        padding: 20px 0px 0px 0px;
     }
-    .footer__socialmedia  img{
+    .footer__socialmedia svg{
         padding: 0px 10px;
     }
 }

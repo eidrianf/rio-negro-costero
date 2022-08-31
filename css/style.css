@@ -34,6 +34,12 @@ nav ul li {
     display: inline-block;
     padding: 0px 5px;
     text-transform: uppercase;
+    transition: all 0.4s ease;
+}
+
+nav ul li:hover {
+    transform: translateY(-3px);
+    transition: all 0.4s ease;
 }
 
 .header__li {
@@ -111,6 +117,28 @@ header h1 {
     margin: 15px 0px;
 }
 
+.atajosIndex__headings a:hover {
+    animation: fadein 0.45s;
+}
+
+@keyframes fadein {
+    0% {
+    opacity:0;
+    }
+    25% {
+    opacity: 0.25;
+    }
+    50%{
+    opacity:0.5;
+    }
+    75% {
+    opacity: 0.75s;
+    }
+    100% {
+    opacity:1;
+    }
+}
+
 .atajosIndex__links {
     text-decoration: none;
     color: #606060;
@@ -138,12 +166,12 @@ header h1 {
     width: 300px;  
     border: 1px solid #6060602b;
     border-radius: 5px;
-    padding: 10px;        
+    padding: 10px;
+    transition: all 0.5s;      
 }
 
 .cards h4 {
     padding-bottom: 15px;
-    
 }
 
 .cards__h4-border {
@@ -157,6 +185,13 @@ header h1 {
     width: 100%;
     object-fit: cover;
     margin-bottom: 20px;
+}
+
+.cards:hover {
+    transition: all 0.5s;
+    box-shadow: 5px 5px 20px -1px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 5px 5px 20px -1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 5px 5px 20px -1px rgba(0,0,0,0.2);  
 }
 
 .contactoIndex {
@@ -184,12 +219,21 @@ header h1 {
 .contactoIndex__button {
     width: 50%;
     border: 2px solid #fafafa;
+    border-radius: 2px;
     padding: 10px;
     font-size: 20px;
     background-color: transparent;
     text-decoration: none;
     text-transform: uppercase;
     color: #fafafa;
+    transition: all 0.4s ease;
+}
+
+.contactoIndex__box a:hover {
+    background-color: #fafafa;
+    color: #237595;
+    transition: all 0.4s ease;
+    transform: scale(1.01);
 }
 
 footer {
@@ -214,6 +258,12 @@ footer ul {
 footer ul li {
     display: inline-block;
     padding: 0px 5px;
+    transition: all 0.4s ease;
+}
+
+footer ul li:hover {
+    transform: translateY(-3px);
+    transition: all 0.4s ease;
 }
 
 .footer__li {
@@ -221,9 +271,29 @@ footer ul li {
     padding-right: 10px
 }
 
-.footer__socialmedia img {
+.footer__socialmedia svg {
     height: 30px;
-    padding: 0px 5px 0px 30px;
+    padding: 5px 5px 0px 30px;
+}
+
+.svg-gris {
+    fill: #606060;
+    transition: all 0.40s;
+}
+
+.svg-gris.facebook:hover {
+    fill: #3B5998;
+    transition: all 0.40s ease;
+}
+
+.svg-gris.instagram:hover {
+    fill: #cd486b;
+    transition: all 0.40s ease;
+}
+
+.svg-gris.twitter:hover {
+    fill: #55acee;
+    transition: all 0.40s ease;
 }
 
 footer p {
@@ -248,7 +318,28 @@ footer p {
     color: #fafafa;
 }
 
+.svg-claro {
+    fill: #fafafa;
+    transition: all 0.40s;
+}
+
+.svg-claro.facebook:hover {
+    fill: #3B5998;
+    transition: all 0.40s ease;
+}
+
+.svg-claro.instagram:hover {
+    fill: #cd486b;
+    transition: all 0.40s ease;
+}
+
+.svg-claro.twitter:hover {
+    fill: #55acee;
+    transition: all 0.40s ease;
+}
+
 /* COMO LLEGAR */
+
 .como-llegar__container {
     padding: 40px 10px;
 }
@@ -360,7 +451,7 @@ footer p {
 
 .formulario__form {
     padding: 40px;
-    border: 1px solid #606060;
+    border: 1.5px solid #606060;
     border-radius: 3px;
     width: 600px;
 }
@@ -395,6 +486,13 @@ footer p {
     color: #fafafa;
     font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
+    transition: all 0.4s ease;
+}
+
+.formulario__button:hover {
+    background-color: #606060d6;
+    transition: all 0.4s ease;
+    transform: scale(1.01);
 }
 
 @media screen and (max-width: 768px) {
@@ -497,9 +595,9 @@ footer p {
         margin-bottom: 20px;
     }
     .footer__socialmedia {
-        padding-top: 20px;
+        padding: 20px 0px 0px 0px;
     }
-    .footer__socialmedia  img{
+    .footer__socialmedia svg{
         padding: 0px 10px;
     }
     /* LUGARES */
