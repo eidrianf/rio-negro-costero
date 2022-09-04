@@ -4,6 +4,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    line-height: normal;
+}
+
+p {
+    margin: 0;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+    font-weight: 700;
+    line-height: 1.2;
 }
 
 body {
@@ -12,7 +23,7 @@ body {
     color: #606060;
 }
 
-.container {
+.container__experiencias {
     display: grid;
     grid-template-areas:
         "header header header"
@@ -52,6 +63,7 @@ footer{
 
 .header__nav ul {
     margin: 10px;
+    padding: 0px;
     list-style-type: none;
 }
 
@@ -77,6 +89,11 @@ ul li a {
     color: #606060;
 }
 
+ul li a:hover {
+    text-decoration: none;
+    color: #606060;
+}
+
 .header__img {
     background-image: url(../img/mar_loros-2-2048x1536.jpeg);
     width: 100%;
@@ -95,7 +112,7 @@ header h1 {
     font-size: 100px;
     color: #fafafa;
     margin-left: 40px;
-    margin-bottom: 10px;
+    margin-bottom: 18px;
 }
 
 /* FILTRO LATERAL */
@@ -123,9 +140,9 @@ header h1 {
 
 /* CARDS */
 .cards__container {
-    display: flex;
+    /* display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
     padding: 40px 10px;
 }
 
@@ -141,6 +158,7 @@ header h1 {
 }
 
 .cards h4 {
+    font-size: 16px;
     padding-bottom: 15px;
 
 }
@@ -206,6 +224,10 @@ footer ul li:hover {
     color: #fafafa;
 }
 
+.footer__pages a:hover {
+    color: #fafafa;
+}
+
 .footer__socialmedia svg {
     height: 30px;
     padding: 5px 5px 0px 30px;
@@ -238,7 +260,7 @@ footer p {
 }
 
 @media screen and (max-width: 768px) {
-    .container {
+    .container__experiencias {
         display: grid;
         grid-template-areas:
             "header header header"
@@ -291,7 +313,7 @@ footer p {
 }
 
 @media screen and (max-width: 480px) {
-    .container {
+    .container__experiencias {
         grid-template-rows: 555px 150px 1fr 180px;
     }
     .header__nav ul {

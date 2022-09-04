@@ -4,6 +4,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    line-height: normal;
+}
+
+p {
+    margin: 0;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+    font-weight: 700;
+    line-height: 1.2;
 }
 
 body {
@@ -47,7 +58,7 @@ nav ul li:hover {
     padding-right: 10px;
 }
 
-ul li a {
+.header__index ul li a {
     text-decoration: none;
     color: #606060;
 }
@@ -89,18 +100,21 @@ header h1 {
     font-size: 100px;
     color: #fafafa;
     margin-left: 40px;
-    margin-bottom: 10px;
+    margin-bottom: 18px;
 }
 
 .atajosIndex {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 40px 10px 0px 10px;
+    padding: 40px 10px;
     width: 100%;
 }
 
 .atajosIndex__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     padding: 0px 60px;
     width: 20%;
@@ -114,11 +128,13 @@ header h1 {
 .atajosIndex__headings {
     text-transform: uppercase;
     font-size: 20px;
+    font-weight: 700;
     margin: 15px 0px;
 }
 
 .atajosIndex__headings a:hover {
     animation: fadein 0.45s;
+    color: #606060;
 }
 
 @keyframes fadein {
@@ -144,6 +160,15 @@ header h1 {
     color: #606060;
 }
 
+.carousel-custom img {
+    height: 500px;
+    object-fit: cover;
+}
+
+.carousel_img1 {
+    object-position: top;
+}
+
 .destacados {
     padding: 40px 10px;
 }
@@ -151,13 +176,13 @@ header h1 {
 .destacados__heading {
     text-transform: uppercase;
     font-size: 30px;
+    font-weight: 700;
 }
 
-.cards__container {
+/* .cards__container {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
+    justify-content: center;                                  
+} */
 
 .cards {
     display: flex;
@@ -171,6 +196,8 @@ header h1 {
 }
 
 .cards h4 {
+    font-size: 16px;
+    font-weight: 700;
     padding-bottom: 15px;
 }
 
@@ -271,6 +298,11 @@ footer ul li:hover {
     padding-right: 10px
 }
 
+.footer__index a {
+    color: #606060;
+    text-decoration: none;
+}
+
 .footer__socialmedia svg {
     height: 30px;
     padding: 5px 5px 0px 30px;
@@ -312,6 +344,7 @@ footer p {
 
 .footer__pages a {
     color: #fafafa;
+    text-decoration: none;
 }
 
 .footer__pages p {
@@ -362,6 +395,7 @@ footer p {
 
 .como-llegar__medios h3 {
     margin-top: 20px;
+    font-size: 18px;
 }
 
 .como-llegar__googlemaps {
@@ -484,7 +518,6 @@ footer p {
     padding: 6px 0px;
     background-color: #606060;
     color: #fafafa;
-    font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
     transition: all 0.4s ease;
 }
