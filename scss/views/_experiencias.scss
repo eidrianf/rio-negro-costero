@@ -1,0 +1,114 @@
+.container__experiencias {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "filtro experiencias experiencias"
+        "footer footer footer"
+    ;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-rows: 555px 1fr 150px;
+    header {
+        grid-area: header;
+    }
+    #filtro {
+        grid-area: filtro;
+    }
+    #experiencias {
+        grid-area: experiencias;
+    }
+    footer{
+        grid-area: footer;
+    }
+}
+
+
+#filtro {
+    padding-top: 50px;
+    p {
+        text-transform: uppercase;
+        font-size: map-get($font-sz, m);
+        padding-left:20px;
+        font-weight: 700;
+    }
+    ul {
+        list-style-type: none;
+        padding: 15px 0px 0px 30px;
+    }
+    li {
+        text-transform: uppercase;
+        margin: 20px 0px;
+        transition: all 0.4s ease;
+                &:hover {
+                    transform: translateY(-3px);
+                    transition: all 0.4s ease;
+                }
+    }
+    a {
+        text-decoration: none;
+        color: $color-gris;
+            &:hover {
+                color: $color-gris;
+            }
+    }
+}
+
+.experiencias__container {
+    padding: $padding-secciones;
+}
+
+@media screen and (max-width: 768px) {
+    .container__experiencias {
+        display: grid;
+        grid-template-areas:
+            "header header header"
+            "filtro filtro filtro"
+            "experiencias experiencias experiencias"
+            "footer footer footer"
+        ;
+        grid-template-rows: 555px 200px 1fr 150px;
+    }
+    #filtro {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        p {
+            padding: 0;
+            margin-bottom: 30px;
+            font-size: map-get($font-sz, xl);
+        }
+        ul {
+            display: flex;
+            flex-direction: row;
+            padding: 0;
+            li{
+                display: flex;
+                flex-direction: row;
+                padding: 0px 10px;
+                margin: 0;
+            }
+        }
+        
+    }
+    .experiencias-border {
+        width: 100%;
+        border-top: 1px solid $color-gris;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container__experiencias {
+        grid-template-rows: 555px 150px 1fr 180px;
+    }
+    #filtro {
+        p {
+            font-size: map-get($font-sz, m);
+        }
+        li{
+            font-size: map-get($font-sz, xs);
+            text-transform: uppercase;
+        margin: 20px 0px;
+        }
+    }
+}

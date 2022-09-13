@@ -1,0 +1,40 @@
+.cards {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0px;
+    width: 300px;  
+    border: 1px solid #6060602b;
+    border-radius: 5px;
+    padding: 10px;
+    transition: all 0.5s;
+    h4 {
+        font-size: 16px;
+        font-weight: 700;
+        padding-bottom: 15px;
+    }
+        &:hover {
+            transition: all 0.5s;
+            box-shadow: 5px 5px 20px -1px rgba(0,0,0,0.2);
+            -webkit-box-shadow: 5px 5px 20px -1px rgba(0,0,0,0.2);
+            -moz-box-shadow: 5px 5px 20px -1px rgba(0,0,0,0.2);  
+        }      
+}
+
+.cards__h4-border {
+    width: 30%;
+    border-bottom: 1.5px solid $color-gris;
+    margin-bottom: 10px;
+}
+
+.cards__img {
+    height: 60%;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .cards {
+        width: 350px;
+    }
+}

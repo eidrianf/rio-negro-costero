@@ -1,0 +1,142 @@
+@media screen and (max-width: 768px) {
+    .headerPages__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    header h1 {
+        font-size: 60px;
+    }
+    .headerPages__h1 {
+        font-size: 70px;
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+    .atajosIndex__item {
+        padding: 0px 30px;
+        width: 40%;
+    }
+    .cards {
+        width: 350px;
+    }
+    /* LUGARES */
+    .lugares__cardscontainer, .lugares__cardscontainer-reverse {
+        flex-direction: column;
+    }  
+    .lugares__carditem {
+        width: 100%;
+    }
+    .lugares__carditem h3, .lugares__carditem-reverse h3 {
+        padding: 10px 20px;
+        font-size: 25px;
+    }
+    .lugares__carditem p, .lugares__carditem-reverse p {
+        padding: 0px 20px 20px 20px;
+    }
+    .lugares__carditem img {
+        padding: 0px 20px;
+    }
+    .lugares__mapa {
+        height: 40vh;
+        margin: 40px 0px;
+    }
+    /* CONTACTO */
+    .formulario__form {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header__nav ul {
+        margin: 5px;
+        list-style-type: none;
+    }
+    nav ul li {
+        padding: 0px 3px;
+        font-size: 8px;                      /* Por ahora lo dejo así hasta que veamos como poner un menú hamburguesa */
+    }
+    .header__li {
+        padding-right: 6px; 
+    }
+    header h1 {
+        font-size: 32px;
+    } 
+    .headerPages__h1 {
+        font-size: 40px;
+    }
+    .atajosIndex__headings {
+        font-size: 15px;
+    }
+    .destacados__heading {
+        font-size: 20px;
+    }
+    .contactoIndex__box {
+        width: 100%;
+        font-size: 25px;
+    }
+    .contactoIndex__button {
+        font-size: 15px;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 180px;
+    }
+    .footer__pages {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .footer__socialmedia {
+        padding: 20px 0px 0px 0px;
+    }
+    .footer__socialmedia svg{
+        padding: 0px 10px;
+    }
+    /* LUGARES */
+    .lugares__carditem h3, .lugares__carditem-reverse h3 {
+        padding: 10px 10px;
+        font-size: 20px;
+    }
+    .lugares__carditem p, .lugares__carditem-reverse p {
+        padding: 0px 10px 20px 10px;
+    }
+    .lugares__carditem img {
+        height: 35vh;
+        padding: 0px 10px;
+    }
+    .lugares__mapa {
+        height: 25vh;
+        margin: 20px 0px 40px 0px;
+    }
+    /* CONTACTO */
+    .formulario__form {
+        width: 90%;
+    }
+    .formulario__form {
+        padding: 30px;
+    }
+    .formulario__form h2 {
+        font-size: 20px;
+    }
+    .formulario__item {
+        padding: 6px 12px 6px 12px;
+    }
+    textarea {
+        height: 160px;
+    }
+    .formulario__button {
+        width: 45%;  
+        font-size: 12px;
+    }
+}

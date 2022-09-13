@@ -1,0 +1,30 @@
+.como-llegar__container {
+    padding: $padding-secciones;
+    h3 {
+        text-transform: uppercase;
+        font-size: map-get($font-sz, xxl);
+    }
+    .como-llegar__intro {
+        margin: 30px 20px 0px 20px;
+        text-align: justify;
+    }
+    .como-llegar__medios {
+        margin: 30px 20px 0px 20px;
+        text-align: justify;
+        h3 {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    }
+    .como-llegar__googlemaps {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+    }
+}
+
+
+
+
+
+

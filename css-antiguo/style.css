@@ -23,6 +23,7 @@ body {
     color: #606060;
 }
 
+/* HEADER */
 .header__container {
     display: flex;
     flex-direction: row;
@@ -103,6 +104,7 @@ header h1 {
     margin-bottom: 18px;
 }
 
+/* ATAJOS INDEX */
 .atajosIndex {
     display: flex;
     flex-direction: row;
@@ -160,6 +162,7 @@ header h1 {
     color: #606060;
 }
 
+/* CAROUSEL */
 .carousel-custom img {
     height: 500px;
     object-fit: cover;
@@ -169,6 +172,7 @@ header h1 {
     object-position: top;
 }
 
+/* DESTACADOS INDEX */
 .destacados {
     padding: 40px 10px;
 }
@@ -221,6 +225,7 @@ header h1 {
     -moz-box-shadow: 5px 5px 20px -1px rgba(0,0,0,0.2);  
 }
 
+/* CONTACTO INDEX */
 .contactoIndex {
     background-image: url(../img/playadesdearriba.jpeg);
     width: 100%;
@@ -263,6 +268,7 @@ header h1 {
     transform: scale(1.01);
 }
 
+/* FOOTER */
 footer {
     height: 150px;
     padding: 40px 5px;
