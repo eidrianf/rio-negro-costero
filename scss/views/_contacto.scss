@@ -1,7 +1,5 @@
 .formulario__container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex(row, center, center);
     margin: 80px 0px;
     .formulario__form {
         padding: 40px;
@@ -26,20 +24,6 @@
         .button__container {
             display: flex;
             justify-content: center;
-            .formulario__button {
-                width: 40%;   
-                margin-top: 10px;
-                padding: 6px 0px;
-                background-color: $color-gris;
-                color: $color-claro;
-                text-transform: uppercase;
-                transition: all 0.4s ease;
-                    &:hover {
-                        background-color: #606060d6;
-                        transition: all 0.4s ease;
-                        transform: scale(1.01);
-                    }
-            }
         }
     }
     

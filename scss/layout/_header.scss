@@ -1,9 +1,6 @@
 header{
     .header__container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        @include flex(row, space-between, center);
         .header__logo {
             height: 55px;
             width: auto;
@@ -44,9 +41,7 @@ header{
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex(row, center, center);
         h1 {
             text-transform: uppercase;
             font-size: 80px;
@@ -62,9 +57,7 @@ header{
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-end;
+        @include flex(row, flex-start, flex-end);
         .headerPages__h1 {
             text-transform: uppercase;
             font-size: 100px;
@@ -83,9 +76,7 @@ header{
             }
         }
         .headerPages__img {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include flex(row, center, center);
             .headerPages__h1 {
                 font-size: 70px;
                 margin-left: 0;

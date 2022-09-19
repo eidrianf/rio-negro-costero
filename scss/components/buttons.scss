@@ -1,0 +1,35 @@
+.boton {
+    border-radius: 2px;
+    color: $color-claro;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    &:hover {
+        transition: all 0.4s ease;
+        transform: scale(1.01);
+    }
+}
+
+.boton-index {
+    @extend .boton;
+    width: 50%;
+    border: 2px solid $color-claro;
+    padding: 10px;
+    font-size: map-get($font-sz, m);
+    background-color: transparent;
+    &:hover {
+        background-color: $color-claro;
+        color: #237595;
+    }
+}
+
+.boton-contacto {
+    @extend .boton;
+    width: 40%;   
+    margin-top: 10px;
+    padding: 6px 0px;
+    background-color: $color-gris;
+    &:hover {
+        background-color: #606060d6;
+    }
+}

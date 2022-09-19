@@ -2,10 +2,7 @@ footer {
     height: 150px;
     padding: 40px 5px;
     .footer__container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        @include flex(row, space-between, center);
         margin-bottom: 40px;
         ul {
             margin: 0;
@@ -37,18 +34,12 @@ footer {
             fill: #606060;
             transition: all 0.40s;
         }
-        .svg-gris.facebook:hover {
-            fill: #3B5998;
-            transition: all 0.40s ease;
+        @each $red, $color in $redes {
+        .svg-gris.#{$red}:hover{
+            fill: $color;
+            transition: all 0.40s ease
         }
-        .svg-gris.instagram:hover {
-            fill: #cd486b;
-            transition: all 0.40s ease;
-        }
-        .svg-gris.twitter:hover {
-            fill: #55acee;
-            transition: all 0.40s ease;
-        }
+    }
     }
     p {
         font-size: map-get($font-sz, xs);
@@ -79,32 +70,20 @@ footer {
         fill: $color-claro;
         transition: all 0.40s;
     }
-    .svg-claro.facebook:hover {
-        fill: #3B5998;
-        transition: all 0.40s ease;
-    }
-    .svg-claro.instagram:hover {
-        fill: #cd486b;
-        transition: all 0.40s ease;
-    }
-    .svg-claro.twitter:hover {
-        fill: #55acee;
-        transition: all 0.40s ease;
+    @each $red, $color in $redes {
+        .svg-claro.#{$red}:hover{
+            fill: $color;
+            transition: all 0.40s ease
+        }
     }
 }
 
 @media screen and (max-width: 480px) {
     footer {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include flex(column, center, center);
         height: 180px;
         .footer__container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            @include flex(column, center, center);
             margin-bottom: 20px;
             .footer__socialmedia {
                 padding: 20px 0px 0px 0px;
@@ -115,10 +94,7 @@ footer {
         }
     }
     .footer__pages {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include flex(column, center, center);
     }
 }
 
