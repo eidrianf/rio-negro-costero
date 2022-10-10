@@ -1,3 +1,5 @@
+/* LUGARES */
+
 .lugares__container {
     display: flex;
     flex-direction: column;
@@ -8,6 +10,7 @@
     }
     .lugares__carditem {
         width: 50%;
+        margin: auto;
         h3 {
             padding: 20px 20px 10px 20px;
             font-size: map-get($font-sz, l);
@@ -38,6 +41,22 @@
     display: flex;
     justify-content: center;
     margin: 40px;
+}
+
+@media screen and (min-width: 1900px) {
+    .lugares__container {
+        .lugares__carditem {
+            h3 {
+                font-size: 28px;
+            }
+            p {
+                font-size: map-get($font-sz, m);
+            }
+            img {
+                height: 50vh;                        
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -84,3 +103,5 @@
         margin: 20px 0px 40px 0px;
     }
 }
+
+/* Fin LUGARES */

@@ -1,3 +1,5 @@
+/* CONTACTO */
+
 .formulario__container {
     @include flex(row, center, center);
     margin: 80px 0px;
@@ -52,7 +54,7 @@
                 height: 160px;
             }
             .button__container{
-                .formulario__button {
+                .boton-contacto {
                     width: 45%;  
                     font-size: 12px;
                 }
@@ -60,3 +62,5 @@
         }
     }
 }
+
+/* Fin CONTACTO */

@@ -17,70 +17,144 @@ body {
   body p {
     margin: 0; }
 
-header .header__container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center; }
-  header .header__container .header__logo {
+/* HEADER */
+header {
+  /* MENÚ HAMBURGUESA */
+  /* Fin MENÚ HAMBURGUESA */ }
+  header .top-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     height: 55px;
-    width: auto; }
-  header .header__container ul {
-    margin: 10px;
-    padding: 0;
-    list-style-type: none; }
-  header .header__container li {
-    display: inline-block;
-    padding: 0px 5px;
+    padding: 10px 10px 10px 0px; }
+    header .top-nav .header__logo {
+      height: 55px;
+      width: auto; }
+  header .menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+  header .menu > li {
+    padding: 0px 9.6px;
     text-transform: uppercase;
+    overflow: hidden;
     transition: all 0.4s ease; }
-    header .header__container li:hover {
+    header .menu > li:hover {
       transform: translateY(-3px);
       transition: all 0.4s ease; }
-  header .header__container .header__li {
+    header .menu > li:last-child {
+      padding: 0px 5px 0px 9.6px; }
+  header .header__li {
     border-right: 1px solid #606060;
     padding-right: 10px; }
-  header .header__container a {
+  header a {
     text-decoration: none;
     color: #606060; }
-    header .header__container a:hover {
+    header a:hover {
       color: #606060; }
-
-header .header__img {
-  background-image: url(../img/mar_loros-2-2048x1536.jpeg);
-  width: 100%;
-  height: 500px;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center; }
-  header .header__img h1 {
-    text-transform: uppercase;
-    font-size: 80px;
-    color: #fafafa; }
-
-header .headerPages__img {
-  background-image: url(../img/mar_loros-2-2048x1536.jpeg);
-  width: 100%;
-  height: 500px;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-end; }
-  header .headerPages__img .headerPages__h1 {
-    text-transform: uppercase;
-    font-size: 100px;
-    color: #fafafa;
-    margin-left: 40px;
-    margin-bottom: 18px; }
+  header .menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  header #menu-toggle {
+    display: none; }
+  header .menu-button,
+  header .menu-button::before,
+  header .menu-button::after {
+    display: block;
+    background-color: #606060;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px; }
+  header .menu-button::before {
+    content: '';
+    margin-top: -8px; }
+  header .menu-button::after {
+    content: '';
+    margin-top: 8px; }
+  header #menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg); }
+  header #menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0); }
+  header #menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg); }
+  @media (max-width: 768px) {
+    header .menu-button-container {
+      display: flex; }
+    header .menu {
+      position: absolute;
+      top: 0;
+      margin-top: 50px;
+      left: 0;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center; }
+    header #menu-toggle ~ .menu li {
+      height: 0;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1); }
+    header #menu-toggle:checked ~ .menu li {
+      border-bottom: 1px solid #606060;
+      height: 2.5em;
+      padding: 0.5em;
+      transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1); }
+    header .menu > li {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0.5em 0;
+      width: 100%;
+      background-color: #fafafa; }
+    header .menu > li:last-child {
+      border-bottom: 1px solid #fafafa !important; } }
+  header .header__img {
+    background-image: url(../img/mar_loros-2-2048x1536.jpeg);
+    width: 100%;
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    header .header__img h1 {
+      text-transform: uppercase;
+      font-size: 80px;
+      color: #fafafa; }
+  header .headerPages__img {
+    background-image: url(../img/mar_loros-2-2048x1536.jpeg);
+    width: 100%;
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end; }
+    header .headerPages__img .headerPages__h1 {
+      text-transform: uppercase;
+      font-size: 100px;
+      color: #fafafa;
+      margin-left: 40px;
+      margin-bottom: 18px; }
 
 @media screen and (max-width: 768px) {
   header .header__img h1 {
@@ -96,20 +170,13 @@ header .headerPages__img {
       margin-bottom: 0; } }
 
 @media screen and (max-width: 480px) {
-  header .header__container ul {
-    margin: 5px;
-    list-style-type: none; }
-  header .header__container li {
-    padding: 0px 3px;
-    font-size: 8px;
-    /* Por ahora lo dejo así hasta que veamos como poner un menú hamburguesa */ }
-  header .header__container .header__li {
-    padding-right: 6px; }
   header .header__img h1 {
     font-size: 32px; }
   header .headerPages__img .headerPages__h1 {
     font-size: 40px; } }
 
+/* Fin HEADER */
+/* INDEX */
 .atajosIndex {
   display: flex;
   flex-direction: row;
@@ -123,10 +190,12 @@ header .headerPages__img {
     justify-content: center;
     align-items: center;
     padding: 0px 60px;
-    width: 20%; }
-    .atajosIndex .atajosIndex__item .atajosIndex__img {
-      height: 30px;
-      margin: 15px 0px; }
+    width: 20%;
+    text-align: center; }
+    .atajosIndex .atajosIndex__item .atajosIndex__svg-gris {
+      height: 25px;
+      margin: 15px 0px;
+      fill: #606060; }
     .atajosIndex .atajosIndex__item .atajosIndex__headings {
       text-transform: uppercase;
       font-size: 20px;
@@ -202,6 +271,7 @@ header .headerPages__img {
     .contactoIndex .contactoIndex__box .contactoIndex__button {
       font-size: 15px; } }
 
+/* Fin INDEX */
 .cards {
   display: flex;
   flex-direction: column;
@@ -264,6 +334,7 @@ header .headerPages__img {
   .boton-contacto:hover {
     background-color: #606060d6; }
 
+/* COMO LLEGAR */
 .como-llegar__container {
   padding: 40px 10px; }
   .como-llegar__container h3 {
@@ -276,13 +347,15 @@ header .headerPages__img {
     margin: 30px 20px 0px 20px;
     text-align: justify; }
     .como-llegar__container .como-llegar__medios h3 {
-      margin-top: 20px;
+      margin: 35px 0px 5px;
       font-size: 18px; }
   .como-llegar__container .como-llegar__googlemaps {
     display: flex;
     justify-content: center;
     margin-top: 40px; }
 
+/* Fin COMO LLEGAR */
+/* LUGARES */
 .lugares__container {
   display: flex;
   flex-direction: column;
@@ -291,7 +364,8 @@ header .headerPages__img {
     display: flex;
     flex-direction: row; }
   .lugares__container .lugares__carditem {
-    width: 50%; }
+    width: 50%;
+    margin: auto; }
     .lugares__container .lugares__carditem h3 {
       padding: 20px 20px 10px 20px;
       font-size: 25px; }
@@ -315,6 +389,14 @@ header .headerPages__img {
   display: flex;
   justify-content: center;
   margin: 40px; }
+
+@media screen and (min-width: 1900px) {
+  .lugares__container .lugares__carditem h3 {
+    font-size: 28px; }
+  .lugares__container .lugares__carditem p {
+    font-size: 20px; }
+  .lugares__container .lugares__carditem img {
+    height: 50vh; } }
 
 @media screen and (max-width: 768px) {
   .lugares__container .lugares__cardscontainer, .lugares__container .lugares__cardscontainer-reverse {
@@ -345,6 +427,8 @@ header .headerPages__img {
     height: 25vh;
     margin: 20px 0px 40px 0px; } }
 
+/* Fin LUGARES */
+/* EXPERIENCIAS */
 .container__experiencias {
   display: grid;
   grid-template-areas: "header header header" "filtro experiencias experiencias" "footer footer footer";
@@ -423,6 +507,8 @@ header .headerPages__img {
     text-transform: uppercase;
     margin: 20px 0px; } }
 
+/* Fin EXPERIENCIAS */
+/* CONTACTO */
 .formulario__container {
   display: flex;
   flex-direction: row;
@@ -465,10 +551,12 @@ header .headerPages__img {
       padding: 6px 12px 6px 12px; }
     .formulario__container .formulario__form textarea {
       height: 160px; }
-    .formulario__container .formulario__form .button__container .formulario__button {
+    .formulario__container .formulario__form .button__container .boton-contacto {
       width: 45%;
       font-size: 12px; } }
 
+/* Fin CONTACTO */
+/* FOOTER */
 footer {
   height: 150px;
   padding: 40px 5px; }
@@ -563,3 +651,5 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center; } }
+
+/* Fin FOOTER */

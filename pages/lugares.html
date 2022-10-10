@@ -8,23 +8,28 @@
     <meta name="description" content="Conocé cada uno de los lugares que hacen a la zona costera de la provincia de Río Negro, Argentina un lugar único, con mucho para descubrir.">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="shortcut icon" href="../img/favicon_RN-Costero.png">
     <title>Río Negro Costero | Lugares</title>
 </head>
 <body>
     <header class="header__index">
-        <div class="header__container">
-            <a href="../index.html" class="header__logo"><img src="../img/logo_RN-costero.png" alt="logo_RioNegro-costero" class="header__logo"></a>
-    
-            <nav>
-                <ul>
-                    <li class="header__li"><a href="../index.html">Inicio</a></li>
-                    <li class="header__li"><a href="./como-llegar.html">Cómo llegar</a></li> 
-                    <li class="header__li"><a href="./lugares.html">Lugares</a></li>
-                    <li class="header__li"><a href="./experiencias.html">Experiencias</a></li>
-                    <li><a href="./contacto.html">Contacto</a></li>
-                </ul>
-            </nav>   
-        </div>
+        <nav class="top-nav">
+            <div class="header__logo">
+                <a href="../index.html"><img src="../img/logo_RN-costero.png" alt="logo_RioNegro-costero" class="header__logo"></a>
+            </div>
+            <input id="menu-toggle" type="checkbox" />
+            <label class='menu-button-container' for="menu-toggle">
+                <div class='menu-button'></div>
+            </label>
+            
+            <ul class="menu">
+                <li class="header__li"><a href="../index.html">Inicio</a></li>
+                <li class="header__li"><a href="../pages/como-llegar.html">Cómo llegar</a></li> 
+                <li class="header__li"><a href="../pages/lugares.html">Lugares</a></li>
+                <li class="header__li"><a href="../pages/experiencias.html">Experiencias</a></li>
+                <li><a href="../pages/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
 
         <div class="headerPages__img">
 
@@ -50,11 +55,7 @@
             <div class="lugares__cardscontainer-reverse">
                 <div class="lugares__carditem lugares__carditem-reverse">
                     <h3>Carmen de Patagones</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, dolorum culpa. Repellat fuga magnam error molestiae eveniet minus, eum magni itaque totam est aspernatur temporibus ex quam voluptate. Quibusdam, veritatis?
-                    Molestiae saepe doloribus perferendis explicabo minus esse maiores tenetur! Explicabo temporibus inventore magnam cum dolores ipsum! Consequuntur, explicabo ipsa? Quod ducimus dignissimos illo ipsam distinctio! Expedita excepturi laborum tempora ipsa!
-                    Quam delectus ipsam odit quos nobis totam dolores neque fugiat culpa dicta odio doloremque dolore iure autem nulla quasi facilis veniam architecto, ratione similique distinctio error. Natus pariatur repellat inventore.
-                    Mollitia soluta possimus consequatur blanditiis est dolores exercitationem reprehenderit excepturi quaerat. Suscipit doloribus molestiae modi possimus sed facilis a excepturi, laborum laudantium delectus, incidunt molestias et consectetur deleniti enim iste.
-                    Nobis, nostrum et sint dolore numquam commodi doloremque esse at quas ut harum, autem sequi ipsa dicta perspiciatis deleniti vitae eaque eligendi aperiam. Illum quod non vel a amet fugiat?</p>
+                    <p>Si bien Carmen de Patagones peternece a la Provincia de Buenos Aires, su cercanía con la ciudad de Viedma hace que resulte imposible no incluirla dentro de los atractivos de la zona. <br><br> Es un lugar de vivencias únicas, que proyecta con un anclaje en su patrimonio histórico cultural, experiencias turísticas memorables vinculadas a los orígenes de la Patagonia colonial. <br><br> Al recorrer las ziszagueantes calles de su probado podrás ingresar a ranchos de estilo colonial, a cuevas hogares labradas en la barranca del río, subir a la torre del antiguo fuerte, y descubrir un sin fin de pasajes que te trasladarán a otra época. <br><br> La irregularidad del terreno y las escarpadas barrancas que se disponen de manera paralela al rio, ofrecen una urbanización particular, aumentando en valor paisajístico de la ciudad.</p>
                 </div>    
                 <div class="lugares__carditem">
                     <img src="../img/lugares/carmen_de_Patagones.jpeg" alt="carmen_de_patagones">
@@ -85,7 +86,7 @@
             <div class="lugares__cardscontainer">
                 <div class="lugares__carditem">
                     <h3>Playa Bonita</h3>
-                    <p>Unos metros más adelante se encuentra la Playa Bonita, denominada así por su singular belleza de aguas transparentes. Se accede a ella a traves de una escalera que se abre entre los acantilados.</p>
+                    <p>Unos metros más adelante se encuentra Playa Bonita, denominada así por su singular belleza de aguas transparentes y la amplitud de su playa de arena firme. <br><br> Hay que tener en cuenta que, por tratarse de un área con acantilados muy altos, el acceso se hace por una bajada que se abre entre éstos, con pendiente pronunciada y escaleras en la parte final. <br><br> Otro factor importante de considerar es que no se puede descender con marea alta, ya que el mar llega hasta el acantilado, cubriendo toda la playa. Por este motivo, recomendamos verificar previamente los horarios de las mareas. <br><br> Durante la marea baja, podrá disfrutar de un balneario poco frecuentado y de ambiente familiar. También se puede ir caminando hasta El Espigón por la playa. </p>  
                 </div>
                 <div class="lugares__carditem">
                  <img src="../img/lugares/playa_bonita.jpeg" alt="playa_bonita">
@@ -95,7 +96,7 @@
             <div class="lugares__cardscontainer-reverse">
                 <div class="lugares__carditem lugares__carditem-reverse">
                     <h3>La Lobería</h3>
-                    <p>A 30 kilómetros de El Cóndor se accede a una playa verdaderamente singular por sus piletones naturales originados por la erosión del mar sobre la roca de los acantilados, los cuales se descubren durante la bajamar. <br><br> Durante la temporada de verano, este balneario cuenta con playa de estacionamiento, restaurante, camping, baños y un carrito elevador que sortea la gran escalinata por la cual se accede al mar.</p>
+                    <p>A 30 kilómetros de El Cóndor se accede a una playa verdaderamente singular por sus piletones naturales originados por la erosión del mar sobre la roca de los acantilados, los cuales se descubren durante la bajamar. <br><br> Se encuentra rodeada por altos acantilados, lo que la coloca en una posición estratégica frente a otras playas, ya que casi nunca llegan los vientos tan característicos de la Patagonia. <br><br> Otra de las bondades de su playa es que se puede tener la oportunidad de tener a metros a un lobo descansando. Es fundamental mantener distancia y no molestarlos. Para preservar la biodiversidad, no está permitido el descenso con mascotas. <br><br> Durante la temporada de verano, este balneario cuenta con playa de estacionamiento, restaurante, camping, baños y un carrito elevador que sortea la gran escalinata por la cual se accede al mar.
                 </div>
                 <div class="lugares__carditem">
                     <img src="../img/lugares/la_loberia.jpeg" alt="la_loberia">
@@ -105,7 +106,7 @@
             <div class="lugares__cardscontainer">
                 <div class="lugares__carditem">
                     <h3>Punta Bermeja</h3>
-                    <p>Creada en 1971, La Reserva Provincial Punta Bermeja es considerada la colonia más grande de lobos marinos de un pelo de Sudamérica, ya que alberga de forma permanente a más de 4000 individuos, alcanzando alrededor de 7500 dependiendo la época del año. <br><br> Desde el mirador, ubicado sobre los acantilados, es posible apreciar el comportamiento de los lobos marinos y de las aves costeras, tales como la paloma antártica, cormoranes, gaviotas cangrejeras, gaviotas cocineras, gaviotas capucho café, petreles, biguás, gaviotines y loros barranqueros, al igual que de aves continentales como el Halconcito Colorado, Halcón Peregrino, Chimangos. <br><br> En ocasiones se registra la presencia de elefantes marinos y de orcas que se acercan en busca de un lugar seguro para alimentarse. Mismo es frecuente ver pasar, cerca de la costa, ejemplares adultos de ballena franca austral.</p>
+                    <p>Creada en 1971, La Reserva Provincial Punta Bermeja es considerada la colonia más grande de lobos marinos de un pelo de Sudamérica, ya que alberga de forma permanente a más de 4000 individuos, alcanzando alrededor de 7500 dependiendo la época del año. <br><br> Desde el mirador, ubicado sobre los acantilados, es posible apreciar el comportamiento de los lobos marinos y de las aves costeras. En ocasiones se registra la presencia de elefantes marinos y de orcas que se acercan en busca de un lugar seguro para alimentarse. Mismo es frecuente ver pasar, cerca de la costa, ejemplares adultos de ballena franca austral. <br><br> Cuenta además con un Centro de Interpretación Faunística donde se pueden conocer detalles sobre la vida de los lobos marinos y otros exponentes de la fauna de la región a través de animales embalsamados, fotos y audiovisuales.</p>
                 </div>
                 <div class="lugares__carditem">
                     <img src="../img/lugares/punta_bermeja.jpeg" alt="punta_bermeja">
@@ -115,7 +116,7 @@
             <div class="lugares__cardscontainer-reverse">
                 <div class="lugares__carditem lugares__carditem-reverse">
                     <h3>Bahía Rosas</h3>
-                    <p>Bahía Rosas/La Ensenada constituye un sitio frecuentado por pescadores locales y visitantes que se ven atraídos por la profundidad de sus aguas y las óptimas condiciones para la pesca costera de tiburón, cazón, pejerrey, róbalo, corvina, pez gallo, pez elefante, etc. <br><br> Un atractivo para toda la familia es la posibilidad de deleitarse con la visita de ballenas entre julio y octubre. Aquí también se encuentran los restos del vapor chileno Ludovico, que naufragó en 1916 tras haber sufrido averías en la embarcación.</p>
+                    <p>Bahía Rosas/La Ensenada constituye un sitio frecuentado por pescadores locales y visitantes que se ven atraídos por la profundidad de sus aguas y las óptimas condiciones para la pesca costera de tiburón, cazón, pejerrey, róbalo, corvina, pez gallo, pez elefante, etc. <br><br> En este rincón patagónico, los médanos son los protagonistas ya que si bien no tienen gran altura alcanzan los 200 metros de ancho regalando paisajes diferentes a los que el visitante venía acostumbrado. <br><br> Un atractivo para toda la familia es la posibilidad de deleitarse con la visita de ballenas entre julio y octubre. Aquí también se encuentran los restos del vapor chileno Ludovico, que naufragó en 1916 tras haber sufrido averías en la embarcación. <br><br> En esta playa no hay ningún tipo de servicio, por lo que debe proveerse de insumos previamente si se tiene planeado pasar toda la jornada.</p>
                 </div>
                 <div class="lugares__carditem">
                     <img src="../img/lugares/bahia_rosas.jpeg" alt="bahia_rosas">
